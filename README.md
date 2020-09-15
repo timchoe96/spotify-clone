@@ -1,68 +1,44 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# About
 
-## Available Scripts
+This is a front-end Spotify clone that utilizes the Spotify API in order to pull account information for display. 
 
-In the project directory, you can run:
+# Technologies
 
-### `npm start`
+The technologies used to build this website include:
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- HTML5
+- CSS3
+- REACT
+- REACT-CONTEXT-API
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+# More info
 
-### `npm test`
+This website includes 2 main pages:
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Login
+2. Home
 
-### `npm run build`
+### Login
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The login page utilizes the Spotify API in order to gain access to a test Spotify account information. The page redirects you to a Spotify login page where you can insert the test credentials below: 
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+username: emailfortesting1996@gmail.com
+password: testing123
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+It will then redirect you back to the Spotify clone website. 
 
-### `npm run eject`
+### Home
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+The home page features a music page that closely resembles a typical Spotify profile page. It draws from the Discover Weekly playlist and profile display name from the test account's Spotify and displays it. 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Songs can be clicked through to change through which song is displayed in the footer control panel. 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+# Website Images
 
-## Learn More
+Homepage:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![](images/home.png)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
