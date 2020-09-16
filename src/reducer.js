@@ -4,6 +4,7 @@ export const initialState = {
   playing: false,
   item: null,
   track: null,
+  index: 0,
 };
 
 const reducer = (state, action) => {
@@ -36,6 +37,12 @@ const reducer = (state, action) => {
       return {
         ...state,
         track: action.track,
+      };
+
+    case "SET_INDEX":
+      return {
+        ...state,
+        index: action.index,
       };
 
     default:

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Sidebar.css";
 import SidebarOption from "../SidebarOption/SidebarOption";
 import HomeIcon from "@material-ui/icons/Home";
@@ -6,8 +6,26 @@ import SearchIcon from "@material-ui/icons/Search";
 import LibraryMusicIcon from "@material-ui/icons/LibraryMusic";
 import { useDataLayerValue } from "../DataLayer/DataLayer";
 
-function Sidebar() {
-  const [{ playlists }] = useDataLayerValue();
+function Sidebar({ spotify }) {
+  const [{ playlists, index }, dispatch] = useDataLayerValue();
+
+  useEffect(() => {
+    spotify.getUserPlaylists().then((playlists) => {
+      dispatch({ type: "SET_PLAYLISTS", playlists: playlists });
+      spotify
+        .getPlaylist(
+          playlists?.items[index].tracks.href
+            .split("playlists/")[1]
+            .split("/")[0]
+        )
+        .then((response) => {
+          dispatch({
+            type: "SET_PLAYLIST",
+            playlist: response,
+          });
+        });
+    });
+  }, [index, dispatch, spotify]);
 
   return (
     <div className="sidebar">
@@ -22,10 +40,12 @@ function Sidebar() {
       <br />
       <strong className="sidebar__title">PLAYLISTS</strong>
       <hr />
-
-      {playlists?.items?.map((playlist, i) => (
-        <SidebarOption title={playlist.name} key={i} />
-      ))}
+      <div className="sidebar__playlists">
+        {playlists?.items?.map((playlist, i) => (
+          <SidebarOption title={playlist.name} key={i} index={i} />
+        ))}
+      </div>
+      <div className="sidebar__placeholder"></div>
     </div>
   );
 }

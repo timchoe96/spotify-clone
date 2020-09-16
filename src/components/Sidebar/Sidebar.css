@@ -7,6 +7,7 @@
   padding-right: 10px;
   height: 100vh;
   background-color: #040404;
+  overflow-y: overlay;
 }
 
 .sidebar__logo {
@@ -17,4 +18,9 @@
 
 .sidebar__title {
   margin-left: 12px;
+}
+
+.sidebar__placeholder {
+  width: 100%;
+  height: 20px;
 }

@@ -20,7 +20,7 @@ This website includes 2 main pages:
 
 ### Login
 
-The login page utilizes the Spotify API in order to gain access to a test Spotify account information. The page redirects you to a Spotify login page where you can insert the test credentials below or you can login with your own account:
+The login page utilizes the Spotify API in order to gain access to your Spotify account information. The page redirects you to a Spotify login page where you can insert the test credentials below or you can login with your own account:
 
 username: emailfortesting1996@gmail.com
 password: testing123
@@ -31,7 +31,7 @@ It will then redirect you back to the Spotify clone website.
 
 The home page features a music page that closely resembles a typical Spotify profile page. It displays all your playlists on the left sidebar and also displays the songs of your first playlist.
 
-Songs can be clicked through to change through which song is displayed in the footer control panel.
+Songs can be clicked through to change through which song is displayed in the footer control panel. Playlists can also be clicked on to pick which playlist is displayed.
 
 # Website Images
 
