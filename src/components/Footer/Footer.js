@@ -11,23 +11,21 @@ import VolumeDownIcon from "@material-ui/icons/VolumeDown";
 import { useDataLayerValue } from "../DataLayer/DataLayer";
 
 function Footer() {
-  const [{ discover_weekly, track }, dispatch] = useDataLayerValue();
+  const [{ playlist, track }, dispatch] = useDataLayerValue();
 
   useEffect(() => {
-    discover_weekly &&
+    playlist &&
       dispatch({
         type: "SET_TRACK",
         track: {
-          name: discover_weekly?.tracks?.items[0].track.name,
-          cover: discover_weekly?.tracks?.items[0].track.album.images[0].url,
-          artist: `${discover_weekly?.tracks?.items[0].track.artists
+          name: playlist?.tracks?.items[0].track.name,
+          cover: playlist?.tracks?.items[0].track.album.images[0].url,
+          artist: `${playlist?.tracks?.items[0].track.artists
             .map((artist) => artist.name)
-            .join(", ")} - ${
-            discover_weekly?.tracks?.items[0].track.album.name
-          }`,
+            .join(", ")} - ${playlist?.tracks?.items[0].track.album.name}`,
         },
       });
-  }, [dispatch, discover_weekly]);
+  }, [dispatch, playlist]);
 
   return (
     <div className="footer">
